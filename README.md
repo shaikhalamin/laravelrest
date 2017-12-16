@@ -19,3 +19,10 @@ php artisan migrate
 php artisan db:seed
 
 ```
+
+```javascript
+	#create api resource
+	php artisan make:resource Product/ProductCollection
+
+```
+
