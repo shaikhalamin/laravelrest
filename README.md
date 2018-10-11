@@ -51,7 +51,7 @@ php artisan db:seed
 
 
 	php artisan config:cache
-	#if you don't get client token then make sure set password_client=1 from oauth_clients table
+	#if you dont get client token then make sure set password_client=1 from oauth_clients table
 	#Or you can run the following command to make client and set password_client to 1 
 	php artisan passport:client --password
 	 #now open http://localhost:8000/oauth/token in postman
