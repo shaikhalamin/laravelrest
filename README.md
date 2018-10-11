@@ -30,6 +30,7 @@ php artisan db:seed
 
 ```javascript
 	#configure api authentication using passport
+	
 
 	composer require laravel/passport
 	php artisan migrate
@@ -48,6 +49,11 @@ php artisan db:seed
 
 	 and change api-> driver ='passport' from token
 
+
+	php artisan config:cache
+	#if you don't get client token then make sure set password_client=1 from oauth_clients table
+	#Or you can run the following command to make client and set password_client to 1 
+	php artisan passport:client --password
 	 #now open http://localhost:8000/oauth/token in postman
 	 #set the header like following
 
