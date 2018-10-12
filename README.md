@@ -76,3 +76,36 @@ php artisan db:seed
 
 ```
 
+```javascript
+
+#Guzzle Http call with header and form_param
+http://docs.guzzlephp.org/en/stable/request-options.html#headers
+http://docs.guzzlephp.org/en/stable/request-options.html#form-params
+
+"guzzlehttp/guzzle": "^6.3",
+
+use GuzzleHttp\Client as GuzzleClient;
+
+$headers = [
+    'Content-Type' => 'application/json',
+    'AccessToken' => 'key',
+    'Authorization' => 'Bearer token',
+];
+
+$client = new GuzzleClient([
+    'headers' => $headers
+]);
+
+$body = '{
+    "key1" : '.$value1.',
+    "key2" : '.$value2.',
+}';
+
+$r = $client->request('POST', 'http://example.com/api/postCall', [
+    'body' => $body
+]);
+$response = $r->getBody()->getContents();
+
+
+```
+
