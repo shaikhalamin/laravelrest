@@ -5,8 +5,6 @@
 /vendor
 /.idea
 /.vagrant
-/bootstrap
-composer.lock
 Homestead.json
 Homestead.yaml
 npm-debug.log
